@@ -26,7 +26,7 @@ def get_db_connection():
 
 @app.route('/')
 def index():
-    conn = sqlite3.connect('planning.db')
+    conn = get_db_connection()
     cursor = conn.cursor()
     cursor.execute('SELECT * FROM planning')
     tasks = cursor.fetchall()
@@ -48,17 +48,17 @@ def add_task():
     if not task:
         return 'Tarefa não fornecida', 400
 
-    conn = sqlite3.connect('planning.db')
+    conn = get_db_connection()
     cursor = conn.cursor()
     cursor.execute('INSERT INTO planning (date, task, obs) VALUES (?, ?, ?)', (date, task, obs))
     conn.commit()
     conn.close()
 
-    return render_template('index.html')
+    return redirect(url_for('index'))
 
 @app.route('/edit/<int:task_id>', methods=['GET','POST'])
 def edit_task(task_id):
-    conn = sqlite3.connect('planning.db')
+    conn = get_db_connection()
     cursor = conn.cursor()
 
     if request.method == 'POST':
@@ -77,7 +77,7 @@ def edit_task(task_id):
 
 @app.route('/delete/<int:task_id>', methods=['POST'])
 def delete_task(task_id):
-    conn = sqlite3.connect('planning.db')
+    conn = get_db_connection()
     cursor = conn.cursor()
     cursor.execute('DELETE FROM planning WHERE id = ?', (task_id,))
     conn.commit()
