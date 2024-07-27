@@ -13,8 +13,10 @@
     </div>
     <ul>
         {% for task in tasks %}
+        <!-- <hr> -->
         <div class="task-line">
-        <li>{% if task[4] != 0 %}
+        <li>
+        {% if task[4] != 0 %}
             <span class="middle-underline"><strong>{{ task[1] }}</strong>: {{ task[2] }}</li></span>
             {% else %}
             <strong>{{ task[1] }}</strong>: {{ task[2] }}</li>
@@ -30,9 +32,10 @@
             <form action="{{ url_for('delete_task', task_id=task[0] )}}" method="post" style="display: inline;">
                 <button type="submit" class="link-button" onclick="return confirm('Tem certeza que deseja excluir?');"><img src="{{ url_for('static', filename='img/trash.png') }} " alt="Remover Tarefa"></button>
             </form>
-        
+        </div>  
+        <!-- <hr> -->
         {% endfor %}
-    </div>    
+      
     </ul>
 </body>
 </html>

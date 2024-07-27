@@ -2,21 +2,23 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: black;
 }
 
 h3, h4 {
     text-align: center;
-    color: #333;
+    color: white;
 }
 
 form {
     max-width: 500px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: black;
     border-radius: 8px;
     /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    height: 40px;
+    min-height: 2%;
 }
 
 .task-actions {
@@ -28,10 +30,14 @@ form {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
 }
 
+hr {
+    max-width: 600px;
+}
+
 label {
     display: block;
     margin-bottom: 5px;
-    color: #555;
+    color: white;
 }
 
 input[type="text"],
@@ -46,16 +52,19 @@ input[type="date"] {
 button {
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
+    background-color: grey;
+    opacity: 0.6;
     color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    height: 40px;
+    min-height: 3%;
 }
 
-button:hover {
+/* button:hover {
     background-color: #0056b3;
-}
+} */
 
 ul {
     list-style-type: none;
@@ -66,13 +75,14 @@ ul {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    background-color: #fff;
+    /* background-color: #fff; */
     margin: 5px auto;
     padding: 0 10px;
     border-radius: 4px;
-    max-width: 600px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    min-height: 30px;
+    max-width: 550px;
+    box-shadow: 0 0 5px white;
+    height: 80px;
+    min-height: 3%;
     font-size: medium;
 }
 
@@ -80,6 +90,7 @@ ul {
     margin: 0;
     margin-right: 15px;
     flex-grow: 1;
+    color: white;
 }
 
 .task-line .task-actions {
@@ -166,7 +177,8 @@ ul {
 
 .add-task-link img {
     display: block;           /* Remove o espaço abaixo da imagem */
-    background-color: #000;   /* Define o fundo da imagem como preto */
+    /* background-color: blue;  */
+    opacity: 0.7;
     border-radius: 30%;       /* Torna a imagem circular (opcional) */
     padding: 5px;            /* Adiciona um preenchimento ao redor da imagem, ajustável */
     width: 30px;              /* Define uma largura para a imagem, ajuste conforme necessário */
@@ -190,12 +202,13 @@ ul {
 .tasks-add h3 {
     margin: 0;                  /* Remove margens padrão */
     font-size: 24px;            /* Define o tamanho da fonte */
-    color: #333;                /* Define a cor do texto */
+    color: white;                /* Define a cor do texto */
 }
 
 .task-line img {
     display: block;           /* Remove o espaço abaixo da imagem */
-    background-color: #000;   /* Define o fundo da imagem como preto */
+    background-color: grey;   /* Define o fundo da imagem como preto */
+    opacity: 0.9;
     border-radius: 20%;       /* Torna a imagem circular (opcional) */
     padding: 2px;            /* Adiciona um preenchimento ao redor da imagem, ajustável */
     width: 25px;              /* Define uma largura para a imagem, ajuste conforme necessário */
@@ -207,6 +220,7 @@ ul {
     text-decoration: none; /* Remove o sublinhado padrão */
     position: relative; /* Necessário para posicionamento absoluto do pseudo-elemento */
     display: inline-block; /* Para que o tamanho se ajuste ao conteúdo */
+    color: white;
 }
 
 .middle-underline::after {
@@ -217,4 +231,5 @@ ul {
     bottom: 50%; /* Ajusta a posição vertical da linha */
     border-bottom: 2px solid black; /* Define o estilo da linha */
     transform: translateY(50%); /* Move a linha para o meio do texto */
+    /* color: white; */
 }
