@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planejamento Diário</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
+</head>
+<body>
+    <h3>Editar Tarefa</h3>
+    <form action="{{ url_for('edit_task', task_id=task[0]) }}" method="post" class="edit-form">
+        <label for="date">Data:</label>
+        <input type="date" id="date" name="date" value="{{ task[1] }}">
+        <label for="task">Tarefa:</label>
+        <input type="text" id="task" name="task" value="{{ task[2] }}" required>
+        <label for="obs">Observação:</label>
+        <input type="text" id="obs" name="obs" value="{{ task[3] }}">
+        <button type="submit"> Salvar Alterações</button>
+        <button><a href="{{ url_for('index') }}" class="back-link">Voltar</a></button>
+    </form>
+    
+</body>
+</html>
