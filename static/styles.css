@@ -233,3 +233,21 @@ ul {
     transform: translateY(50%); /* Move a linha para o meio do texto */
     /* color: white; */
 }
+
+.filter-form-index {
+    margin-bottom: 20px;
+    margin-left: 160px;
+}
+
+.filter-form-index button {
+    width: 50px;
+    height: auto;
+    padding: 10px;
+}
+
+#info-filter-index {
+    color: white;
+    margin-left: 180px;
+    margin-bottom: 20px;
+    font-size: x-small;
+}

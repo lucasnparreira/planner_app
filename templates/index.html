@@ -11,9 +11,14 @@
         <h3>Tarefas</h3>
         <a href="{{ url_for('add_task') }}" class="add-task-link"><img src="{{ url_for('static', filename='img/plus.png') }} " alt="Adicionar Tarefa"></a>
     </div>
+    <form class="filter-form-index" method="get" action="{{ url_for('index') }}">
+        <label for="filter_month_year">Filtrar atividades por mês/ano:¹</label>
+        <input type="month" id="filter_month_year" name="filter_month_year">
+        <button type="submit">Filtrar</button>
+    </form>
+    <span id="info-filter-index">¹Por padrão, sempre são exibidas apenas as tarefas do mês atual.</span>
     <ul>
         {% for task in tasks %}
-        <!-- <hr> -->
         <div class="task-line">
         <li>
         {% if task[4] != 0 %}
@@ -33,7 +38,6 @@
                 <button type="submit" class="link-button" onclick="return confirm('Tem certeza que deseja excluir?');"><img src="{{ url_for('static', filename='img/trash.png') }} " alt="Remover Tarefa"></button>
             </form>
         </div>  
-        <!-- <hr> -->
         {% endfor %}
       
     </ul>

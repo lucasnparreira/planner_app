@@ -1,3 +1,4 @@
+from datetime import datetime
 from flask import Flask, request, render_template, redirect, url_for
 import sqlite3
 
@@ -24,11 +25,29 @@ def get_db_connection():
     conn.row_factory = sqlite3.Row 
     return conn
 
+def get_current_month_year():
+    now = datetime.now()
+    current_month = now.strftime('%m')
+    current_year = now.strftime('%Y')
+    now_date = current_year + "-" + current_month
+    return now_date
+
 @app.route('/')
 def index():
+    filter_month_year = request.args.get('filter_month_year', None)
+
     conn = get_db_connection()
     cursor = conn.cursor()
-    cursor.execute('SELECT * FROM planning')
+
+    #por padrao, será filtrado as tarefas do mês atual
+    if not filter_month_year:
+        filter_month_year = get_current_month_year()
+
+    if filter_month_year:
+        year, month = filter_month_year.split('-')
+        cursor.execute('SELECT * FROM planning WHERE strftime("%m", date) = ? and strftime("%Y", date) = ?', (month, year))
+    else:
+        cursor.execute('SELECT * FROM planning')
     tasks = cursor.fetchall()
     conn.close()
     return render_template('index.html', tasks=tasks)
