@@ -2,19 +2,19 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: black;
+    background-color: white;
 }
 
 h3, h4 {
     text-align: center;
-    color: white;
+    color: black;
 }
 
 form {
     max-width: 500px;
     margin: 20px auto;
     padding: 20px;
-    background-color: black;
+    background-color: white;
     border-radius: 8px;
     /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
     height: 40px;
@@ -37,7 +37,7 @@ hr {
 label {
     display: block;
     margin-bottom: 5px;
-    color: white;
+    color: black;
 }
 
 input[type="text"],
@@ -80,7 +80,7 @@ ul {
     padding: 0 10px;
     border-radius: 4px;
     max-width: 550px;
-    box-shadow: 0 0 5px white;
+    box-shadow: 0 0 5px grey;
     height: 80px;
     min-height: 3%;
     font-size: medium;
@@ -90,7 +90,7 @@ ul {
     margin: 0;
     margin-right: 15px;
     flex-grow: 1;
-    color: white;
+    color: black;
 }
 
 .task-line .task-actions {
@@ -103,7 +103,7 @@ ul {
 .task-line a {
     margin-left: 5px;
     text-decoration: none;
-    color: #007bff;
+    color: grey;
     font-weight: bold;
 }
 
@@ -113,24 +113,24 @@ ul {
 
 /* Estilo do botão como link */
 .link-button {
-    background: none;        /* Remove o fundo */
-    border: none;            /* Remove a borda */
-    color: #007bff;          /* Cor do texto igual ao link */
-    font-weight: bold;       /* Fonte em negrito */
-    cursor: pointer;         /* Cursor de ponteiro para indicar que é clicável */
-    margin-left: 5px;        /* Pequeno espaçamento à esquerda */
-    text-decoration: none;   /* Remove sublinhado padrão */
-    padding: 0;              /* Remove o preenchimento padrão do botão */
-    font-size: 16px;         /* Tamanho da fonte igual ao link */
+    background: none;        
+    border: none;            
+    color: grey;          
+    font-weight: bold;       
+    cursor: pointer;         
+    margin-left: 5px;        
+    text-decoration: none;   
+    padding: 0;              
+    font-size: 16px;         
 }
 
 .link-button:hover,
 .link-button:focus {
-    text-decoration: underline; /* Sublinhado ao passar o mouse ou quando em foco */
+    text-decoration: underline; 
 }
 
 .link-button:focus {
-    outline: none;            /* Remove o contorno padrão ao receber foco */
+    outline: none;            
 }
 
 /* Estilos específicos para a página de edição */
@@ -153,7 +153,7 @@ ul {
 }
 
 .back-link:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .back-link a {
@@ -170,39 +170,39 @@ ul {
 }
 
 .add-task-link {
-    display: block;           /* Faz com que o link se comporte como um bloco para facilitar o alinhamento */
-    text-align: center;        /* Alinha o conteúdo do link à direita */
-    margin: 20px;             /* Espaço ao redor do link, ajuste conforme necessário */
+    display: block;           
+    text-align: center;        
+    margin: 20px;             
 }
 
 .add-task-link img {
-    display: block;           /* Remove o espaço abaixo da imagem */
-    /* background-color: blue;  */
+    display: block;           
+    background-color: grey; 
     opacity: 0.7;
-    border-radius: 30%;       /* Torna a imagem circular (opcional) */
-    padding: 5px;            /* Adiciona um preenchimento ao redor da imagem, ajustável */
-    width: 30px;              /* Define uma largura para a imagem, ajuste conforme necessário */
-    height: 30px;             /* Define uma altura para a imagem, ajuste conforme necessário */
+    border-radius: 30%;       
+    padding: 5px;            
+    width: 30px;              
+    height: 30px;             
 }
 
 .add-task-link img:hover {
-    opacity: 0.6;             /* Adiciona um efeito de opacidade ao passar o mouse */
-    cursor: pointer;          /* Muda o cursor para indicar que é clicável */
+    opacity: 0.6;             
+    cursor: pointer;          
 }
 
 .tasks-add {
-    display: flex;               /* Define o layout de flexbox */
-    align-items: center;        /* Alinha os itens verticalmente no centro */
-    justify-content: space-between; /* Espaça os itens uniformemente */
-    max-width: 600px;           /* Define uma largura máxima para o container */
+    display: flex;               
+    align-items: center;        
+    justify-content: space-between; 
+    max-width: 600px;           
     margin: 20px auto;   
     /* padding: 5px;   */
 }
 
 .tasks-add h3 {
-    margin: 0;                  /* Remove margens padrão */
-    font-size: 24px;            /* Define o tamanho da fonte */
-    color: white;                /* Define a cor do texto */
+    margin: 0;                  
+    font-size: 24px;            
+    color: black;                
 }
 
 .task-line img {
@@ -220,7 +220,7 @@ ul {
     text-decoration: none; /* Remove o sublinhado padrão */
     position: relative; /* Necessário para posicionamento absoluto do pseudo-elemento */
     display: inline-block; /* Para que o tamanho se ajuste ao conteúdo */
-    color: white;
+    color: black;
 }
 
 .middle-underline::after {
@@ -246,8 +246,15 @@ ul {
 }
 
 #info-filter-index {
-    color: white;
+    color: black;
     margin-left: 180px;
     margin-bottom: 20px;
     font-size: x-small;
+}
+
+.btn-toggle-mode {
+    width: 120px;
+    border-radius: 60%;
+    margin-right: 180px;
+    margin-top: 30%;
 }

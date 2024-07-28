@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planejamento Diário</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
+    {% if color_mode == 'white' %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='white_mode.css') }}">
+    {% else %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='dark_mode.css') }}">
+    {% endif %}
 </head>
 <body>
     <h3>Adicionar Tarefa</h3>

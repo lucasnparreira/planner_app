@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    {% if color_mode == 'white' %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='white_mode.css') }}">
+    {% else %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='dark_mode.css') }}">
+    {% endif %}
     <title>Planejamento Diário</title>
 </head>
 <body>
@@ -41,5 +45,16 @@
         {% endfor %}
       
     </ul>
+    <footer>
+        <form class="btn-toggle-mode" action="{{ url_for('toggle_mode') }}" method="get">
+            <button type="submit">
+                {% if color_mode == 'white' %}
+                Modo Escuro
+                {% else %}
+                Modo Claro
+                {% endif %}
+            </button>
+        </form>
+    </footer>
 </body>
 </html>

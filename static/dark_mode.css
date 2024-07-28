@@ -1,0 +1,260 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+h3, h4 {
+    text-align: center;
+    color: white;
+}
+
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: black;
+    border-radius: 8px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    height: 40px;
+    min-height: 2%;
+}
+
+.task-actions {
+    max-width: 600px; /* Aumenta a largura máxima do card */
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #fff;
+    /* border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+hr {
+    max-width: 600px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+}
+
+input[type="text"],
+input[type="date"] {
+    width: 97%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: grey;
+    opacity: 0.6;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 40px;
+    min-height: 3%;
+}
+
+/* button:hover {
+    background-color: #0056b3;
+} */
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-line {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* background-color: #fff; */
+    margin: 5px auto;
+    padding: 0 10px;
+    border-radius: 4px;
+    max-width: 550px;
+    box-shadow: 0 0 5px white;
+    height: 80px;
+    min-height: 3%;
+    font-size: medium;
+}
+
+.task-line li {
+    margin: 0;
+    margin-right: 15px;
+    flex-grow: 1;
+    color: white;
+}
+
+.task-line .task-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+    font-size: small;
+}
+
+.task-line a {
+    margin-left: 5px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.task-line a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo do botão como link */
+.link-button {
+    background: none;        /* Remove o fundo */
+    border: none;            /* Remove a borda */
+    color: #007bff;          /* Cor do texto igual ao link */
+    font-weight: bold;       /* Fonte em negrito */
+    cursor: pointer;         /* Cursor de ponteiro para indicar que é clicável */
+    margin-left: 5px;        /* Pequeno espaçamento à esquerda */
+    text-decoration: none;   /* Remove sublinhado padrão */
+    padding: 0;              /* Remove o preenchimento padrão do botão */
+    font-size: 16px;         /* Tamanho da fonte igual ao link */
+}
+
+.link-button:hover,
+.link-button:focus {
+    text-decoration: underline; /* Sublinhado ao passar o mouse ou quando em foco */
+}
+
+.link-button:focus {
+    outline: none;            /* Remove o contorno padrão ao receber foco */
+}
+
+/* Estilos específicos para a página de edição */
+
+.edit-form label {
+    margin-top: 10px;
+}
+
+.edit-form button {
+    margin-top: 15px;
+}
+
+.back-link {
+    display: block;
+    text-align: center;
+    margin: 0px auto;
+    text-decoration: none;
+    color: white;
+    /* font-weight: bold; */
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.back-link a {
+    text-decoration: none;
+}
+
+.form-add-task label{
+    margin-top: 10px;
+}
+
+.form-add-task button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.add-task-link {
+    display: block;           /* Faz com que o link se comporte como um bloco para facilitar o alinhamento */
+    text-align: center;        /* Alinha o conteúdo do link à direita */
+    margin: 20px;             /* Espaço ao redor do link, ajuste conforme necessário */
+}
+
+.add-task-link img {
+    display: block;           /* Remove o espaço abaixo da imagem */
+    /* background-color: blue;  */
+    opacity: 0.7;
+    border-radius: 30%;       /* Torna a imagem circular (opcional) */
+    padding: 5px;            /* Adiciona um preenchimento ao redor da imagem, ajustável */
+    width: 30px;              /* Define uma largura para a imagem, ajuste conforme necessário */
+    height: 30px;             /* Define uma altura para a imagem, ajuste conforme necessário */
+}
+
+.add-task-link img:hover {
+    opacity: 0.6;             /* Adiciona um efeito de opacidade ao passar o mouse */
+    cursor: pointer;          /* Muda o cursor para indicar que é clicável */
+}
+
+.tasks-add {
+    display: flex;               /* Define o layout de flexbox */
+    align-items: center;        /* Alinha os itens verticalmente no centro */
+    justify-content: space-between; /* Espaça os itens uniformemente */
+    max-width: 600px;           /* Define uma largura máxima para o container */
+    margin: 20px auto;   
+    /* padding: 5px;   */
+}
+
+.tasks-add h3 {
+    margin: 0;                  /* Remove margens padrão */
+    font-size: 24px;            /* Define o tamanho da fonte */
+    color: white;                /* Define a cor do texto */
+}
+
+.task-line img {
+    display: block;           /* Remove o espaço abaixo da imagem */
+    background-color: grey;   /* Define o fundo da imagem como preto */
+    opacity: 0.9;
+    border-radius: 20%;       /* Torna a imagem circular (opcional) */
+    padding: 2px;            /* Adiciona um preenchimento ao redor da imagem, ajustável */
+    width: 25px;              /* Define uma largura para a imagem, ajuste conforme necessário */
+    height: 25px;             /* Define uma altura para a imagem, ajuste conforme necessário */
+    
+}
+
+.middle-underline {
+    text-decoration: none; /* Remove o sublinhado padrão */
+    position: relative; /* Necessário para posicionamento absoluto do pseudo-elemento */
+    display: inline-block; /* Para que o tamanho se ajuste ao conteúdo */
+    color: white;
+}
+
+.middle-underline::after {
+    content: ""; /* Pseudo-elemento para a linha */
+    position: absolute; /* Posicionamento absoluto em relação ao pai */
+    left: 0; /* Início do sublinhado no início do texto */
+    right: 0; /* Fim do sublinhado no final do texto */
+    bottom: 50%; /* Ajusta a posição vertical da linha */
+    border-bottom: 2px solid black; /* Define o estilo da linha */
+    transform: translateY(50%); /* Move a linha para o meio do texto */
+    /* color: white; */
+}
+
+.filter-form-index {
+    margin-bottom: 20px;
+    margin-left: 160px;
+}
+
+.filter-form-index button {
+    width: 50px;
+    height: auto;
+    padding: 10px;
+}
+
+#info-filter-index {
+    color: white;
+    margin-left: 180px;
+    margin-bottom: 20px;
+    font-size: x-small;
+}
+
+.btn-toggle-mode {
+    width: 120px;
+    border-radius: 60%;
+    margin-right: 180px;
+    margin-top: 30%;
+}
